@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="movies">
+    <div class="container">
+      <h2 class="text-center mt-2">Movies</h2>
+      <div class="movies-inner d-flex mt-3">
+        <form class="js-form d-flex flex-column m-2" action="https://echo.htmlacademy.ru" method="get">
+          <label class="mb-3" for="search-input">
+            <span>Search: </span>
+            <input class="js-search-input" type="search" placeholder="search" id="search-input"
+            name="search">
+          </label>
+
+          <label class="mb-3" for="sort-catagory">
+            <span>Catagory: </span>
+            <select class="js-catagory" name="catagory" id="sort-catagory">
+              <option value="all">All</option>
+            </select>
+          </label>
+
+          <label class="mb-3" for="sort-rating">
+            <span>Rating: </span>
+            <input class="js-rating-input" type="number" placeholder="enter rating" id="sort-rating" name="rating">
+          </label>
+
+          <label class="mb-3" for="sort-movies">
+            <span>Sorting: </span>
+            <select class="js-soring-select" name="sorting" id="sort-movies">
+              <option value="rating_desc" selected>
+                Rating high to low
+              </option>
+              <option value="rating_asc">Rating low to high</option>
+              <option value="az">A-Z</option>
+              <option value="za">Z-A</option>
+              <option value="year_desc">Year new to old</option>
+              <option value="year_asc">Year old to new</option>
+            </select>
+          </label>
+
+          <button class="btn btn-primary">Search</button>
+        </form>
+        
+        <ul class="js-list bg-light list-unstyled d-flex flex-wrap justify-content-around ms-4">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <template class="js-template">
+    <li class="item m-3 bg-white rounded-3">
+      <div class="card bg-white border-0">
+        <img class="movie-poster" src="./img/art-design-5.jpg" alt="picture">
+
+        <div class="card-body bg-white">
+          <h3 class="movie-title h5">Title</h3>
+
+          <p class="card-text">
+            <span>Year:</span>
+            <span class="movie-year">2029</span>
+          </p>
+
+          <p class="card-text">
+            <span>Rating:</span>
+            <span class="movie-rating">7</span>
+          </p>
+
+          <p class="card-text">
+            <span>Catagory:</span>
+            <span class="movie-catagory">Unqivgxidb , shbduybsos</span>
+          </p>
+
+          <p class="card-text">
+            <a class="movie-trailer-link" href="">Watch</a>
+          </p>
+        </div>
+      </div>
+    </li>
+  </template>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/movies.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
